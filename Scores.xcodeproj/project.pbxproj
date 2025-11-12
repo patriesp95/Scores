@@ -6,17 +6,24 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B3DED5D72EC479BC00F6E524 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DED5D42EC479BC00F6E524 /* ContentView.swift */; };
+		B3DED5D82EC479BC00F6E524 /* ScoresApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DED5D52EC479BC00F6E524 /* ScoresApp.swift */; };
+		B3DED5D92EC479BC00F6E524 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3DED5D32EC479BC00F6E524 /* Assets.xcassets */; };
+		B3DED5DD2EC47A6E00F6E524 /* scoresdata.json in Resources */ = {isa = PBXBuildFile; fileRef = B3DED5DB2EC47A6E00F6E524 /* scoresdata.json */; };
+		B3DED5DE2EC47A6E00F6E524 /* scoresdatatest.json in Resources */ = {isa = PBXBuildFile; fileRef = B3DED5DC2EC47A6E00F6E524 /* scoresdatatest.json */; };
+		B3DED5E22EC47AED00F6E524 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DED5E12EC47AED00F6E524 /* Score.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		B3DED5C52EC4665300F6E524 /* Scores.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scores.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3DED5D32EC479BC00F6E524 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B3DED5D42EC479BC00F6E524 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B3DED5D52EC479BC00F6E524 /* ScoresApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresApp.swift; sourceTree = "<group>"; };
+		B3DED5DB2EC47A6E00F6E524 /* scoresdata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = scoresdata.json; sourceTree = "<group>"; };
+		B3DED5DC2EC47A6E00F6E524 /* scoresdatatest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = scoresdatatest.json; sourceTree = "<group>"; };
+		B3DED5E12EC47AED00F6E524 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		B3DED5C72EC4665300F6E524 /* Scores */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Scores;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B3DED5C22EC4665300F6E524 /* Frameworks */ = {
@@ -32,7 +39,7 @@
 		B3DED5BC2EC4665300F6E524 = {
 			isa = PBXGroup;
 			children = (
-				B3DED5C72EC4665300F6E524 /* Scores */,
+				B3DED5D62EC479BC00F6E524 /* Scores */,
 				B3DED5C62EC4665300F6E524 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +50,43 @@
 				B3DED5C52EC4665300F6E524 /* Scores.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B3DED5D62EC479BC00F6E524 /* Scores */ = {
+			isa = PBXGroup;
+			children = (
+				B3DED5E02EC47AE200F6E524 /* Model */,
+				B3DED5DA2EC47A4900F6E524 /* Resources */,
+				B3DED5D42EC479BC00F6E524 /* ContentView.swift */,
+				B3DED5D52EC479BC00F6E524 /* ScoresApp.swift */,
+				B3DED5D32EC479BC00F6E524 /* Assets.xcassets */,
+				B3DED5DF2EC47A7B00F6E524 /* Test */,
+			);
+			path = Scores;
+			sourceTree = "<group>";
+		};
+		B3DED5DA2EC47A4900F6E524 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B3DED5DB2EC47A6E00F6E524 /* scoresdata.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B3DED5DF2EC47A7B00F6E524 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				B3DED5DC2EC47A6E00F6E524 /* scoresdatatest.json */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		B3DED5E02EC47AE200F6E524 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B3DED5E12EC47AED00F6E524 /* Score.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +103,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				B3DED5C72EC4665300F6E524 /* Scores */,
 			);
 			name = Scores;
 			packageProductDependencies = (
@@ -109,6 +150,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3DED5DD2EC47A6E00F6E524 /* scoresdata.json in Resources */,
+				B3DED5DE2EC47A6E00F6E524 /* scoresdatatest.json in Resources */,
+				B3DED5D92EC479BC00F6E524 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +163,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3DED5D72EC479BC00F6E524 /* ContentView.swift in Sources */,
+				B3DED5E22EC47AED00F6E524 /* Score.swift in Sources */,
+				B3DED5D82EC479BC00F6E524 /* ScoresApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +298,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = Scores/Test/scoresdatatest.json;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -282,6 +330,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = Scores/Test/scoresdatatest.json;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
