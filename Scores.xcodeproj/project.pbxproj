@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B33209012EC5A8CC0032A9F0 /* ScoresVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33209002EC5A8C70032A9F0 /* ScoresVM.swift */; };
+		B3ACE3022EC5BEFD00DDCDBA /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ACE3012EC5BEFD00DDCDBA /* JSONLoader.swift */; };
 		B3DED5D72EC479BC00F6E524 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DED5D42EC479BC00F6E524 /* ContentView.swift */; };
 		B3DED5D82EC479BC00F6E524 /* ScoresApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DED5D52EC479BC00F6E524 /* ScoresApp.swift */; };
 		B3DED5D92EC479BC00F6E524 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3DED5D32EC479BC00F6E524 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		B33209002EC5A8C70032A9F0 /* ScoresVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresVM.swift; sourceTree = "<group>"; };
+		B3ACE3012EC5BEFD00DDCDBA /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
 		B3DED5C52EC4665300F6E524 /* Scores.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scores.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3DED5D32EC479BC00F6E524 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3DED5D42EC479BC00F6E524 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 		B3DED5E52EC4DF1400F6E524 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				B3ACE3012EC5BEFD00DDCDBA /* JSONLoader.swift */,
 				B3DED5E82EC5380D00F6E524 /* Repository.swift */,
 				B3DED5E62EC4DF2100F6E524 /* DataRepository.swift */,
 			);
@@ -195,6 +198,7 @@
 				B3DED5E42EC4D0B800F6E524 /* Formatters.swift in Sources */,
 				B33209012EC5A8CC0032A9F0 /* ScoresVM.swift in Sources */,
 				B3DED5E72EC4DF2100F6E524 /* DataRepository.swift in Sources */,
+				B3ACE3022EC5BEFD00DDCDBA /* JSONLoader.swift in Sources */,
 				B3DED5E22EC47AED00F6E524 /* Score.swift in Sources */,
 				B3DED5D82EC479BC00F6E524 /* ScoresApp.swift in Sources */,
 				B3DED5E92EC5380F00F6E524 /* Repository.swift in Sources */,

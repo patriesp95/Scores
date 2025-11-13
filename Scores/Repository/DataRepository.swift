@@ -7,20 +7,17 @@
 
 import Foundation
 
-protocol DataRepository {
-    var url: URL { get }
+protocol DataRepository: JSONLoader {
     func load() throws -> [Score]
     func save(scores: [Score]) throws
 }
 
 extension DataRepository {
     func load() throws -> [Score] {
-        let data = try Data(contentsOf: url)
-        return try JSONDecoder().decode([Score].self, from: data)
+        try load(type: [Score].self)
     }
     
     func save(scores: [Score]) throws {
-        let data = try JSONEncoder().encode(scores)
-        try data.write(to: url, options: .atomic) // avoids data race
+        try save(scores: scores)
     }
 }
