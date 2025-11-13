@@ -13,6 +13,9 @@
 		B3DED5DD2EC47A6E00F6E524 /* scoresdata.json in Resources */ = {isa = PBXBuildFile; fileRef = B3DED5DB2EC47A6E00F6E524 /* scoresdata.json */; };
 		B3DED5DE2EC47A6E00F6E524 /* scoresdatatest.json in Resources */ = {isa = PBXBuildFile; fileRef = B3DED5DC2EC47A6E00F6E524 /* scoresdatatest.json */; };
 		B3DED5E22EC47AED00F6E524 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DED5E12EC47AED00F6E524 /* Score.swift */; };
+		B3DED5E42EC4D0B800F6E524 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DED5E32EC4D0B800F6E524 /* Formatters.swift */; };
+		B3DED5E72EC4DF2100F6E524 /* DataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DED5E62EC4DF2100F6E524 /* DataRepository.swift */; };
+		B3DED5E92EC5380F00F6E524 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DED5E82EC5380D00F6E524 /* Repository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		B3DED5DB2EC47A6E00F6E524 /* scoresdata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = scoresdata.json; sourceTree = "<group>"; };
 		B3DED5DC2EC47A6E00F6E524 /* scoresdatatest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = scoresdatatest.json; sourceTree = "<group>"; };
 		B3DED5E12EC47AED00F6E524 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		B3DED5E32EC4D0B800F6E524 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
+		B3DED5E62EC4DF2100F6E524 /* DataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepository.swift; sourceTree = "<group>"; };
+		B3DED5E82EC5380D00F6E524 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,7 @@
 		B3DED5D62EC479BC00F6E524 /* Scores */ = {
 			isa = PBXGroup;
 			children = (
+				B3DED5E52EC4DF1400F6E524 /* Repository */,
 				B3DED5E02EC47AE200F6E524 /* Model */,
 				B3DED5DA2EC47A4900F6E524 /* Resources */,
 				B3DED5D42EC479BC00F6E524 /* ContentView.swift */,
@@ -84,9 +91,19 @@
 		B3DED5E02EC47AE200F6E524 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B3DED5E32EC4D0B800F6E524 /* Formatters.swift */,
 				B3DED5E12EC47AED00F6E524 /* Score.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B3DED5E52EC4DF1400F6E524 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				B3DED5E82EC5380D00F6E524 /* Repository.swift */,
+				B3DED5E62EC4DF2100F6E524 /* DataRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,8 +181,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3DED5D72EC479BC00F6E524 /* ContentView.swift in Sources */,
+				B3DED5E42EC4D0B800F6E524 /* Formatters.swift in Sources */,
+				B3DED5E72EC4DF2100F6E524 /* DataRepository.swift in Sources */,
 				B3DED5E22EC47AED00F6E524 /* Score.swift in Sources */,
 				B3DED5D82EC479BC00F6E524 /* ScoresApp.swift in Sources */,
+				B3DED5E92EC5380F00F6E524 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
