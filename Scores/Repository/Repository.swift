@@ -8,28 +8,17 @@
 import Foundation
 
 struct Repository: DataRepository {
-    func load() throws -> [Score] {
-        guard let url = Bundle.main.url(forResource: "scoresdata", withExtension: "json") else { return []}
-        let data = try Data(contentsOf: url)
-        return try JSONDecoder().decode([Score].self, from: data)
-    }
-    
-    func save(scores: [Score]) throws {
-        let url = URL.documentsDirectory.appending(path: "scoresdata.json")
-        let data = try JSONEncoder().encode(scores)
-        try data.write(to: url, options: .atomic) // avoids data race
+    var url: URL {
+        Bundle.main.url(forResource: "scoresdata", withExtension: "json")!
     }
 }
 
-
 struct RepositoryTest: DataRepository {
-    func load() throws -> [Score] {
-        guard let url = Bundle.main.url(forResource: "scoresdatatest", withExtension: "json") else { return []}
-        let data = try Data(contentsOf: url)
-        return try JSONDecoder().decode([Score].self, from: data)
+    var url: URL {
+        Bundle.main.url(forResource: "scoresdatatest", withExtension: "json")!
     }
     
     func save(scores: [Score]) throws {
-        print("Se han intentado guardar \(scores.count).")
+        print("We have tried to retrieve \(scores.count).")
     }
 }
