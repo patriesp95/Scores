@@ -8,17 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var vm = ScoresVM()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        List(vm.scores) { score in
+            Text(score.title)
         }
-        .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(vm: ScoresVM(repository: RepositoryTest()))
 }

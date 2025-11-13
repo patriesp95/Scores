@@ -7,9 +7,8 @@
 
 import Foundation
 
-struct Score: Codable {
+struct Score: Codable, Identifiable {
     let id: Int
-    let idMaldito: Int
     let title: String
     let composer: String
     let year: Int

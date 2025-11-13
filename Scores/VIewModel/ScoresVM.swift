@@ -10,7 +10,7 @@ import Combine
 
 final class ScoresVM: ObservableObject {
     @Published var scores: [Score]
-    let repository: DataRepository
+    private let repository: DataRepository
     
     init(repository: DataRepository = Repository()) {
         self.repository = repository

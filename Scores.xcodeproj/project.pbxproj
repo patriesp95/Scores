@@ -71,13 +71,13 @@
 		B3DED5D62EC479BC00F6E524 /* Scores */ = {
 			isa = PBXGroup;
 			children = (
+				B3DED5D42EC479BC00F6E524 /* ContentView.swift */,
 				B33208FF2EC5A8AA0032A9F0 /* VIewModel */,
 				B3DED5E52EC4DF1400F6E524 /* Repository */,
-				B3DED5E02EC47AE200F6E524 /* Model */,
+				B3DED5E02EC47AE200F6E524 /* Models */,
 				B3DED5DA2EC47A4900F6E524 /* Resources */,
-				B3DED5D42EC479BC00F6E524 /* ContentView.swift */,
-				B3DED5D52EC479BC00F6E524 /* ScoresApp.swift */,
 				B3DED5D32EC479BC00F6E524 /* Assets.xcassets */,
+				B3DED5D52EC479BC00F6E524 /* ScoresApp.swift */,
 				B3DED5DF2EC47A7B00F6E524 /* Test */,
 			);
 			path = Scores;
@@ -99,13 +99,13 @@
 			path = Test;
 			sourceTree = "<group>";
 		};
-		B3DED5E02EC47AE200F6E524 /* Model */ = {
+		B3DED5E02EC47AE200F6E524 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B3DED5E32EC4D0B800F6E524 /* Formatters.swift */,
 				B3DED5E12EC47AED00F6E524 /* Score.swift */,
+				B3DED5E32EC4D0B800F6E524 /* Formatters.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		B3DED5E52EC4DF1400F6E524 /* Repository */ = {
