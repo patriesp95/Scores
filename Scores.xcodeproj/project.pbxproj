@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B33209012EC5A8CC0032A9F0 /* ScoresVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33209002EC5A8C70032A9F0 /* ScoresVM.swift */; };
 		B3DED5D72EC479BC00F6E524 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DED5D42EC479BC00F6E524 /* ContentView.swift */; };
 		B3DED5D82EC479BC00F6E524 /* ScoresApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DED5D52EC479BC00F6E524 /* ScoresApp.swift */; };
 		B3DED5D92EC479BC00F6E524 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3DED5D32EC479BC00F6E524 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B33209002EC5A8C70032A9F0 /* ScoresVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresVM.swift; sourceTree = "<group>"; };
 		B3DED5C52EC4665300F6E524 /* Scores.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scores.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3DED5D32EC479BC00F6E524 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3DED5D42EC479BC00F6E524 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +44,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B33208FF2EC5A8AA0032A9F0 /* VIewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B33209002EC5A8C70032A9F0 /* ScoresVM.swift */,
+			);
+			path = VIewModel;
+			sourceTree = "<group>";
+		};
 		B3DED5BC2EC4665300F6E524 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +71,7 @@
 		B3DED5D62EC479BC00F6E524 /* Scores */ = {
 			isa = PBXGroup;
 			children = (
+				B33208FF2EC5A8AA0032A9F0 /* VIewModel */,
 				B3DED5E52EC4DF1400F6E524 /* Repository */,
 				B3DED5E02EC47AE200F6E524 /* Model */,
 				B3DED5DA2EC47A4900F6E524 /* Resources */,
@@ -182,6 +193,7 @@
 			files = (
 				B3DED5D72EC479BC00F6E524 /* ContentView.swift in Sources */,
 				B3DED5E42EC4D0B800F6E524 /* Formatters.swift in Sources */,
+				B33209012EC5A8CC0032A9F0 /* ScoresVM.swift in Sources */,
 				B3DED5E72EC4DF2100F6E524 /* DataRepository.swift in Sources */,
 				B3DED5E22EC47AED00F6E524 /* Score.swift in Sources */,
 				B3DED5D82EC479BC00F6E524 /* ScoresApp.swift in Sources */,
