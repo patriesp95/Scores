@@ -13,7 +13,7 @@ protocol JSONLoader {
 extension JSONLoader {
     func load<JSON>(type: JSON.Type) throws -> JSON where JSON: Decodable {
         let data = try Data(contentsOf: url)
-        return try JSONDecoder().decode(JSON.self, from: data)
+        return try JSONDecoder().decode(type, from: data)
     }
     
     func save<JSON>(data: [JSON]) throws where JSON: Encodable {
