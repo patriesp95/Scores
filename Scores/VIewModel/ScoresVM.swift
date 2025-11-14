@@ -15,7 +15,7 @@ final class ScoresVM: ObservableObject {
     init(repository: DataRepository = Repository()) {
         self.repository = repository
         do {
-            self.scores = try repository.load()
+            self.scores = try repository.loadScores()
         } catch {
             self.scores = []
             print(error)

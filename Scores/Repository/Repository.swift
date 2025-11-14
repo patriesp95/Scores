@@ -18,7 +18,7 @@ struct RepositoryTest: DataRepository {
         Bundle.main.url(forResource: "scoresdatatest", withExtension: "json")!
     }
     
-    func save(scores: [Score]) throws {
+    func saveScores(_ scores: [Score]) throws {
         print("We have tried to retrieve \(scores.count).")
     }
 }

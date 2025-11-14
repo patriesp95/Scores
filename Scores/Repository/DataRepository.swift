@@ -8,16 +8,16 @@
 import Foundation
 
 protocol DataRepository: JSONLoader {
-    func load() throws -> [Score]
-    func save(scores: [Score]) throws
+    func loadScores() throws -> [Score]
+    func saveScores(_ scores: [Score]) throws
 }
 
 extension DataRepository {
-    func load() throws -> [Score] {
+    func loadScores() throws -> [Score] {
         try load(type: [Score].self)
     }
     
-    func save(scores: [Score]) throws {
-        try save(scores: scores)
+    func saveScores(_ scores: [Score]) throws {
+        try save(data: scores)
     }
 }
