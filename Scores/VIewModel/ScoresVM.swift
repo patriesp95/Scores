@@ -21,4 +21,8 @@ final class ScoresVM: ObservableObject {
             print(error)
         }
     }
+    
+    func delete(indexSet: IndexSet) {
+        scores.remove(atOffsets: indexSet)
+    }
 }

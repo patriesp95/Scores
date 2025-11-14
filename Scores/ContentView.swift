@@ -12,8 +12,11 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            List(vm.scores) { score in
-                ScoreRow(score: score)
+            List {
+                ForEach(vm.scores) { score in
+                    ScoreRow(score: score)
+                }
+                .onDelete(perform: vm.delete)
             }
             .listStyle(.grouped)
             .navigationTitle("Scores")
