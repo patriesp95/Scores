@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B319D7EE2EC71156000FC268 /* ScoreRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B319D7ED2EC71156000FC268 /* ScoreRow.swift */; };
 		B33209012EC5A8CC0032A9F0 /* ScoresVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33209002EC5A8C70032A9F0 /* ScoresVM.swift */; };
 		B3ACE3022EC5BEFD00DDCDBA /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ACE3012EC5BEFD00DDCDBA /* JSONLoader.swift */; };
 		B3DED5D72EC479BC00F6E524 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DED5D42EC479BC00F6E524 /* ContentView.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B319D7ED2EC71156000FC268 /* ScoreRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreRow.swift; sourceTree = "<group>"; };
 		B33209002EC5A8C70032A9F0 /* ScoresVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresVM.swift; sourceTree = "<group>"; };
 		B3ACE3012EC5BEFD00DDCDBA /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
 		B3DED5C52EC4665300F6E524 /* Scores.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scores.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +48,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B319D7EC2EC71150000FC268 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B319D7ED2EC71156000FC268 /* ScoreRow.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		B33208FF2EC5A8AA0032A9F0 /* VIewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				B3DED5D42EC479BC00F6E524 /* ContentView.swift */,
+				B319D7EC2EC71150000FC268 /* Components */,
 				B33208FF2EC5A8AA0032A9F0 /* VIewModel */,
 				B3DED5E52EC4DF1400F6E524 /* Repository */,
 				B3DED5E02EC47AE200F6E524 /* Models */,
@@ -201,6 +212,7 @@
 				B3ACE3022EC5BEFD00DDCDBA /* JSONLoader.swift in Sources */,
 				B3DED5E22EC47AED00F6E524 /* Score.swift in Sources */,
 				B3DED5D82EC479BC00F6E524 /* ScoresApp.swift in Sources */,
+				B319D7EE2EC71156000FC268 /* ScoreRow.swift in Sources */,
 				B3DED5E92EC5380F00F6E524 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
