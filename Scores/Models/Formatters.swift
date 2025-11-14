@@ -13,6 +13,6 @@ extension Score {
     }
     
     var lengthS: String {
-        length.formatted(.number.precision(.integerAndFractionLength(integer: 3, fraction: 1)))
+        "\(length.formatted(.number.precision(.integerAndFractionLength(integer: 3, fraction: 1)))) min."
     }
 }
