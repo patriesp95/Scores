@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ScoreRow: View {
     let score: Score
-
+    
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
@@ -24,7 +24,7 @@ struct ScoreRow: View {
                     Text(score.lengthS)
                 }
                 .font(.caption)
-                .padding(.vertical, 5)
+                .padding(.vertical, 2)
             }
             Image(score.cover)
                 .resizable()

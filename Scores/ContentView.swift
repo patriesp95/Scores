@@ -11,8 +11,21 @@ struct ContentView: View {
     @ObservedObject var vm = ScoresVM()
     
     var body: some View {
-        List(vm.scores) { score in
-            ScoreRow(score: score)
+        NavigationStack {
+            List(vm.scores) { score in
+                ScoreRow(score: score)
+            }
+            .listStyle(.grouped)
+            .navigationTitle("Scores")
+            .toolbar {
+                ToolbarItem {
+                    Button {
+                        
+                    } label: {
+                        Label("Insertar", systemImage: "plus")
+                    }
+                }
+            }
         }
     }
 }
