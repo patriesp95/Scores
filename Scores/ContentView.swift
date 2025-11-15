@@ -25,7 +25,7 @@ struct ContentView: View {
             .toolbar {
                 ToolbarItem {
                     Button {
-                        showInsert = true
+                        showInsert.toggle()
                     } label: {
                         Label("Insertar", systemImage: "plus")
                     }
