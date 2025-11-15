@@ -9,10 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var vm = ScoresVM()
-    
+
     @State private var showInsert = false
     @State private var detents: PresentationDetent = .medium
-    
+    @State private var searchPresent = false
+
     var body: some View {
         NavigationStack {
             List {
@@ -23,13 +24,20 @@ struct ContentView: View {
             }
             .listStyle(.grouped)
             .navigationTitle("Scores")
-            .searchable(text: $vm.search , prompt: "Search a score by title")
+            .searchable(
+                text: $vm.search,
+                isPresented: $searchPresent,
+                prompt: "Search for a score by title"
+            )
             .insertButtonV2 {
                 showInsert.toggle()
             }
             .sheet(isPresented: $showInsert) {
                 AddScoreView()
-                    .presentationDetents([.medium, .large], selection: $detents)
+                    .presentationDetents(
+                        [.medium, .large],
+                        selection: $detents
+                    )
                     .presentationDragIndicator(.visible)
                     .presentationBackgroundInteraction(.enabled)
             }
