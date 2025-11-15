@@ -23,7 +23,9 @@ struct ContentView: View {
             }
             .listStyle(.grouped)
             .navigationTitle("Scores")
-            .insertButton(show: $showInsert)
+            .insertButtonV2 {
+                showInsert.toggle()
+            }
             .sheet(isPresented: $showInsert) {
                 AddScoreView()
                     .presentationDetents([.fraction(0.20), .medium, .large], selection: $detents)
