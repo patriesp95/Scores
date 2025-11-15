@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var vm = ScoresVM()
+    @State private var showInsert = false
+    @State private var detents: PresentationDetent = .fraction(0.20)
     
     var body: some View {
         NavigationStack {
@@ -23,11 +25,17 @@ struct ContentView: View {
             .toolbar {
                 ToolbarItem {
                     Button {
-                        
+                        showInsert = true
                     } label: {
                         Label("Insertar", systemImage: "plus")
                     }
                 }
+            }
+            .sheet(isPresented: $showInsert) {
+                Text("Voy a insertar")
+                    .presentationDetents([.fraction(0.20), .medium, .large], selection: $detents)
+                    .presentationDragIndicator(.visible)
+                    .presentationBackgroundInteraction(.enabled)
             }
         }
     }
