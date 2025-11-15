@@ -16,7 +16,8 @@ fileprivate struct InsertButtonV1: ViewModifier {
                     Button {
                         showInsert.toggle()
                     } label: {
-                        Label("Insertar", systemImage: "plus")
+                        Image(systemName: "plus")
+                            .rotationEffect(showInsert ? .degrees(-45) : .degrees(.zero))
                     }
                 }
             }
