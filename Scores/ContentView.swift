@@ -11,7 +11,7 @@ struct ContentView: View {
     @ObservedObject var vm = ScoresVM()
     
     @State private var showInsert = false
-    @State private var detents: PresentationDetent = .fraction(0.20)
+    @State private var detents: PresentationDetent = .medium
     
     var body: some View {
         NavigationStack {
@@ -28,7 +28,7 @@ struct ContentView: View {
             }
             .sheet(isPresented: $showInsert) {
                 AddScoreView()
-                    .presentationDetents([.fraction(0.20), .medium, .large], selection: $detents)
+                    .presentationDetents([.medium, .large], selection: $detents)
                     .presentationDragIndicator(.visible)
                     .presentationBackgroundInteraction(.enabled)
             }
