@@ -16,21 +16,18 @@ struct ScoresSectionView: View {
 
     var body: some View {
         NavigationStack {
-            VStack {
-                List {
-                    ForEach(vm.scoresByComposer, id: \.self) { scores in
-                        Section {
-                            ForEach(scores) { score in
-                                ScoreRow(score: score)
-                            }
-                        } header : {
-                            Text(scores.first?.composer ?? "")
+            List {
+                ForEach(vm.scoresByComposer, id: \.self) { scores in
+                    Section {
+                        ForEach(scores) { score in
+                            ScoreRow(score: score)
                         }
+                    } header : {
+                        Text(scores.first?.composer ?? "")
                     }
-                    .onDelete(perform: vm.delete)
                 }
+                .onDelete(perform: vm.delete)
             }
-            .listStyle(.grouped)
             .navigationTitle("Scores")
             .searchable(
                 text: $vm.search,
