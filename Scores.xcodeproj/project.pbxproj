@@ -57,9 +57,9 @@
 		B319D7EC2EC71150000FC268 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				B3003BC12EC8C2FE00030B3F /* InsertButton.swift */,
 				B319D7ED2EC71156000FC268 /* ScoreRow.swift */,
 				B3003BBF2EC8BCE400030B3F /* CloseButton.swift */,
+				B3003BC12EC8C2FE00030B3F /* InsertButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
