@@ -16,7 +16,7 @@ struct ScoresSectionView: View {
 
     var body: some View {
         NavigationStack {
-            list2
+            list3
                 .navigationTitle("Scores")
                 .searchable(
                     text: $vm.search,
@@ -66,6 +66,27 @@ struct ScoresSectionView: View {
             }
             .onDelete(perform: vm.delete)
         }
+    }
+    
+    var list3: some View {
+        ScrollView {
+            LazyVStack(pinnedViews: [.sectionHeaders]) {
+                ForEach(vm.composers) { composer in
+                    if !composer.scores.isEmpty {
+                        Section {
+                            ForEach(composer.scores) { score in
+                                ScoreRow2(score: score)
+                            }
+                        } header: {
+                            ComposerHeader(composer: composer.composer)
+                        }
+                    }
+                }
+                .onDelete(perform: vm.delete)
+            }
+        }
+        .scrollIndicators(.hidden)
+        .safeAreaPadding()
     }
 }
 

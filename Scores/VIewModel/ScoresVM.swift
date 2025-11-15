@@ -31,7 +31,8 @@ final class ScoresVM: ObservableObject {
     var composers: [Composers] {
         Set(scores.map(\.composer)).sorted().map { composer in
             Composers(composer: composer,
-                      scores: scores.filter { $0.composer == composer } )
+                      scores: scores.filter { $0.composer == composer }
+                .filter{ search.isEmpty || $0.title.range(of: search, options: [.caseInsensitive, .diacriticInsensitive]) != nil })
         }
     }
     
