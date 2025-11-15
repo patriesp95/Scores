@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B3003BBE2EC881F800030B3F /* AddScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3003BBD2EC881F800030B3F /* AddScoreView.swift */; };
+		B3003BC02EC8BCE400030B3F /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3003BBF2EC8BCE400030B3F /* CloseButton.swift */; };
 		B319D7EE2EC71156000FC268 /* ScoreRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B319D7ED2EC71156000FC268 /* ScoreRow.swift */; };
 		B33209012EC5A8CC0032A9F0 /* ScoresVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33209002EC5A8C70032A9F0 /* ScoresVM.swift */; };
 		B3ACE3022EC5BEFD00DDCDBA /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ACE3012EC5BEFD00DDCDBA /* JSONLoader.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		B3003BBD2EC881F800030B3F /* AddScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScoreView.swift; sourceTree = "<group>"; };
+		B3003BBF2EC8BCE400030B3F /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		B319D7ED2EC71156000FC268 /* ScoreRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreRow.swift; sourceTree = "<group>"; };
 		B33209002EC5A8C70032A9F0 /* ScoresVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresVM.swift; sourceTree = "<group>"; };
 		B3ACE3012EC5BEFD00DDCDBA /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				B319D7ED2EC71156000FC268 /* ScoreRow.swift */,
+				B3003BBF2EC8BCE400030B3F /* CloseButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				B3DED5E42EC4D0B800F6E524 /* Formatters.swift in Sources */,
 				B33209012EC5A8CC0032A9F0 /* ScoresVM.swift in Sources */,
 				B3DED5E72EC4DF2100F6E524 /* DataRepository.swift in Sources */,
+				B3003BC02EC8BCE400030B3F /* CloseButton.swift in Sources */,
 				B3ACE3022EC5BEFD00DDCDBA /* JSONLoader.swift in Sources */,
 				B3003BBE2EC881F800030B3F /* AddScoreView.swift in Sources */,
 				B3DED5E22EC47AED00F6E524 /* Score.swift in Sources */,

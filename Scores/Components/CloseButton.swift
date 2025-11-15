@@ -5,4 +5,28 @@
 //  Created by Patricia M Espert on 15/11/25.
 //
 
-import Foundation
+import SwiftUI
+
+struct CloseButton: ViewModifier {
+    @Environment(\.dismiss) private var dismiss
+
+    
+    func body(content: Content) -> some View {
+        content
+            .toolbar {
+                ToolbarItem {
+                    Button(role: .close) {
+                        dismiss()
+                    } label: {
+                        Label("Close", systemImage: "xmark")
+                    }
+                }
+            }
+    }
+}
+
+extension View {
+    var closeButton: some View {
+        modifier(CloseButton())
+    }
+}
