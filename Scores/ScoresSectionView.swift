@@ -54,5 +54,5 @@ struct ScoresSectionView: View {
 }
 
 #Preview {
-    ScoresSectionView()
+    ScoresSectionView(vm: ScoresVM(repository: RepositoryTest()))
 }
