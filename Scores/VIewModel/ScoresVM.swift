@@ -12,6 +12,14 @@ final class ScoresVM: ObservableObject {
     @Published var scores: [Score]
     private let repository: DataRepository
     
+    @Published var search = ""
+    
+    var scoresFiltered: [Score] {
+        scores.filter {
+            search.isEmpty || $0.title.range(of: search, options: [.caseInsensitive, .diacriticInsensitive]) != nil
+        }
+    }
+    
     init(repository: DataRepository = Repository()) {
         self.repository = repository
         do {

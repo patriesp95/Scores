@@ -16,13 +16,14 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(vm.scores) { score in
+                ForEach(vm.scoresFiltered) { score in
                     ScoreRow(score: score)
                 }
                 .onDelete(perform: vm.delete)
             }
             .listStyle(.grouped)
             .navigationTitle("Scores")
+            .searchable(text: $vm.search , prompt: "Search a score by title")
             .insertButtonV2 {
                 showInsert.toggle()
             }
