@@ -16,36 +16,55 @@ struct ScoresSectionView: View {
 
     var body: some View {
         NavigationStack {
-            List {
-                ForEach(vm.scoresByComposer, id: \.self) { scores in
-                    Section {
-                        ForEach(scores) { score in
-                            ScoreRow(score: score)
-                        }
-                    } header : {
-                        Text(scores.first?.composer ?? "")
-                    }
+            list2
+                .navigationTitle("Scores")
+                .searchable(
+                    text: $vm.search,
+                    isPresented: $searchPresent,
+                    prompt: "Search for a score by title"
+                )
+                .insertButtonV2 {
+                    showInsert.toggle()
                 }
-                .onDelete(perform: vm.delete)
+                .sheet(isPresented: $showInsert) {
+                    AddScoreView()
+                        .presentationDetents(
+                            [.medium, .large],
+                            selection: $detents
+                        )
+                        .presentationDragIndicator(.visible)
+                        .presentationBackgroundInteraction(.enabled)
+                }
+        }
+    }
+
+    var list1: some View {
+        List {
+            ForEach(vm.scoresByComposer, id: \.self) { scores in
+                Section {
+                    ForEach(scores) { score in
+                        ScoreRow(score: score)
+                    }
+                } header: {
+                    Text(scores.first?.composer ?? "")
+                }
             }
-            .navigationTitle("Scores")
-            .searchable(
-                text: $vm.search,
-                isPresented: $searchPresent,
-                prompt: "Search for a score by title"
-            )
-            .insertButtonV2 {
-                showInsert.toggle()
+            .onDelete(perform: vm.delete)
+        }
+    }
+    
+    var list2: some View {
+        List {
+            ForEach(vm.composers) { composer in
+                Section {
+                    ForEach(composer.scores) { score in
+                        ScoreRow(score: score)
+                    }
+                } header: {
+                    Text(composer.composer)
+                }
             }
-            .sheet(isPresented: $showInsert) {
-                AddScoreView()
-                    .presentationDetents(
-                        [.medium, .large],
-                        selection: $detents
-                    )
-                    .presentationDragIndicator(.visible)
-                    .presentationBackgroundInteraction(.enabled)
-            }
+            .onDelete(perform: vm.delete)
         }
     }
 }

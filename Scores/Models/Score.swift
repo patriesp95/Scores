@@ -17,6 +17,12 @@ struct Score: Codable, Identifiable, Hashable {
     let tracks: [String]
 }
 
+struct Composers: Identifiable {
+    let id = UUID()
+    let composer: String
+    let scores: [Score]
+}
+
 #if DEBUG
 extension Score {
     static let test = Score(

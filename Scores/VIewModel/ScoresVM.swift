@@ -28,8 +28,11 @@ final class ScoresVM: ObservableObject {
         }
     }
     
-    var composers: [String] {
-        Set(scores.map(\.composer)).sorted()
+    var composers: [Composers] {
+        Set(scores.map(\.composer)).sorted().map { composer in
+            Composers(composer: composer,
+                      scores: scores.filter { $0.composer == composer } )
+        }
     }
     
     init(repository: DataRepository = Repository()) {
