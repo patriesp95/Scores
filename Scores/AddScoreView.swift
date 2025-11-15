@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddScoreView: View {
-    @Binding var showInsert: Bool
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         NavigationStack {
@@ -18,7 +18,7 @@ struct AddScoreView: View {
                 .toolbar {
                     ToolbarItem {
                         Button(role: .close) {
-                            showInsert.toggle()
+                            dismiss()
                         } label: {
                             Label("Close", systemImage: "xmark")
                         }
@@ -29,6 +29,5 @@ struct AddScoreView: View {
 }
 
 #Preview {
-    @Previewable @State var showInsert = true
-    AddScoreView(showInsert: $showInsert)
+    AddScoreView()
 }

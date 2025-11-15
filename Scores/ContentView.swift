@@ -32,7 +32,7 @@ struct ContentView: View {
                 }
             }
             .sheet(isPresented: $showInsert) {
-                AddScoreView(showInsert: $showInsert)
+                AddScoreView()
                     .presentationDetents([.fraction(0.20), .medium, .large], selection: $detents)
                     .presentationDragIndicator(.visible)
                     .presentationBackgroundInteraction(.enabled)
