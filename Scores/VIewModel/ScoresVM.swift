@@ -20,6 +20,18 @@ final class ScoresVM: ObservableObject {
         }
     }
     
+    var scoresByComposer: [[Score]] {
+        Dictionary(grouping: scores) { score in
+            score.composer
+        }.values.sorted { s1, s2 in
+            s1.first?.composer ?? "" <= s2.first?.composer ?? ""
+        }
+    }
+    
+    var composers: [String] {
+        Set(scores.map(\.composer)).sorted()
+    }
+    
     init(repository: DataRepository = Repository()) {
         self.repository = repository
         do {

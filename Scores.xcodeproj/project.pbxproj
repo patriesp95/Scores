@@ -10,6 +10,7 @@
 		B3003BBE2EC881F800030B3F /* AddScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3003BBD2EC881F800030B3F /* AddScoreView.swift */; };
 		B3003BC02EC8BCE400030B3F /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3003BBF2EC8BCE400030B3F /* CloseButton.swift */; };
 		B3003BC22EC8C2FE00030B3F /* InsertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3003BC12EC8C2FE00030B3F /* InsertButton.swift */; };
+		B3003BC42EC903D800030B3F /* ScoresSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3003BC32EC903D800030B3F /* ScoresSectionView.swift */; };
 		B319D7EE2EC71156000FC268 /* ScoreRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B319D7ED2EC71156000FC268 /* ScoreRow.swift */; };
 		B33209012EC5A8CC0032A9F0 /* ScoresVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33209002EC5A8C70032A9F0 /* ScoresVM.swift */; };
 		B3ACE3022EC5BEFD00DDCDBA /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ACE3012EC5BEFD00DDCDBA /* JSONLoader.swift */; };
@@ -28,6 +29,7 @@
 		B3003BBD2EC881F800030B3F /* AddScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScoreView.swift; sourceTree = "<group>"; };
 		B3003BBF2EC8BCE400030B3F /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		B3003BC12EC8C2FE00030B3F /* InsertButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertButton.swift; sourceTree = "<group>"; };
+		B3003BC32EC903D800030B3F /* ScoresSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresSectionView.swift; sourceTree = "<group>"; };
 		B319D7ED2EC71156000FC268 /* ScoreRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreRow.swift; sourceTree = "<group>"; };
 		B33209002EC5A8C70032A9F0 /* ScoresVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresVM.swift; sourceTree = "<group>"; };
 		B3ACE3012EC5BEFD00DDCDBA /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				B3DED5D42EC479BC00F6E524 /* ContentView.swift */,
+				B3003BC32EC903D800030B3F /* ScoresSectionView.swift */,
 				B3003BBD2EC881F800030B3F /* AddScoreView.swift */,
 				B319D7EC2EC71150000FC268 /* Components */,
 				B33208FF2EC5A8AA0032A9F0 /* VIewModel */,
@@ -216,6 +219,7 @@
 			files = (
 				B3DED5D72EC479BC00F6E524 /* ContentView.swift in Sources */,
 				B3003BC22EC8C2FE00030B3F /* InsertButton.swift in Sources */,
+				B3003BC42EC903D800030B3F /* ScoresSectionView.swift in Sources */,
 				B3DED5E42EC4D0B800F6E524 /* Formatters.swift in Sources */,
 				B33209012EC5A8CC0032A9F0 /* ScoresVM.swift in Sources */,
 				B3DED5E72EC4DF2100F6E524 /* DataRepository.swift in Sources */,

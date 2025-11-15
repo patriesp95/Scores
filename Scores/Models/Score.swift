@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Score: Codable, Identifiable {
+struct Score: Codable, Identifiable, Hashable {
     let id: Int
     let title: String
     let composer: String

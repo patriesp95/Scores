@@ -18,7 +18,16 @@ struct ScoresSectionView: View {
         NavigationStack {
             VStack {
                 List {
-                    Print(vm.scoresByComposer)
+                    ForEach(vm.scoresByComposer, id: \.self) { scores in
+                        Section {
+                            ForEach(scores) { score in
+                                ScoreRow(score: score)
+                            }
+                        } header : {
+                            Text(scores.first?.composer ?? "")
+                        }
+                    }
+                    .onDelete(perform: vm.delete)
                 }
             }
             .listStyle(.grouped)
