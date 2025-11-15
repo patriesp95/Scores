@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var vm = ScoresVM()
+    
     @State private var showInsert = false
     @State private var detents: PresentationDetent = .fraction(0.20)
     
@@ -22,15 +23,7 @@ struct ContentView: View {
             }
             .listStyle(.grouped)
             .navigationTitle("Scores")
-            .toolbar {
-                ToolbarItem {
-                    Button {
-                        showInsert.toggle()
-                    } label: {
-                        Label("Insertar", systemImage: "plus")
-                    }
-                }
-            }
+            .insertButton(show: $showInsert)
             .sheet(isPresented: $showInsert) {
                 AddScoreView()
                     .presentationDetents([.fraction(0.20), .medium, .large], selection: $detents)
