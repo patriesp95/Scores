@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CloseButton: ViewModifier {
+fileprivate struct CloseButton: ViewModifier {
     @Environment(\.dismiss) private var dismiss
 
     
@@ -15,10 +15,18 @@ struct CloseButton: ViewModifier {
         content
             .toolbar {
                 ToolbarItem {
-                    Button(role: .close) {
-                        dismiss()
-                    } label: {
-                        Label("Close", systemImage: "xmark")
+                    if #available(iOS 26.0, *) {
+                        Button(role: .close) {
+                            dismiss()
+                        } label: {
+                            Label("Close", systemImage: "xmark")
+                        }
+                    } else {
+                        Button {
+                            dismiss()
+                        } label: {
+                            Label("Close", systemImage: "xmark")
+                        }
                     }
                 }
             }
