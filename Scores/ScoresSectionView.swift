@@ -76,6 +76,19 @@ struct ScoresSectionView: View {
                 }
             }
         }
+        .alert("Deleting Scores", isPresented: $vm.showAlert) {
+            Button(role: .cancel) {} label: {
+                Text("Cancel")
+            }
+            
+            Button(role: .destructive){
+                vm.deletePendingScore()
+            } label: {
+                Text("Delete")
+            }
+        } message : {
+            Text(vm.msg)
+        }
     }
 
     var list3: some View {

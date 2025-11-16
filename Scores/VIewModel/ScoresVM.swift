@@ -14,6 +14,11 @@ final class ScoresVM: ObservableObject {
     
     @Published var search = ""
     
+    @Published var showAlert = false
+    @Published var msg = ""
+    
+    private var scoreToDelete: Score?
+    
     var scoresFiltered: [Score] {
         scores.filter {
             search.isEmpty || $0.title.range(of: search, options: [.caseInsensitive, .diacriticInsensitive]) != nil
@@ -53,7 +58,15 @@ final class ScoresVM: ObservableObject {
     func deleteRow(composer: String, indexSet: IndexSet) {
         if let index = indexSet.first, let scoresComposer = composers.first(where: { $0.composer == composer})?.scores {
             let score = scoresComposer[index]
-            scores.removeAll(where: { $0.id == score.id })
+            msg = "Are you sure about deleting \(score.title)'s score?"
+            showAlert.toggle()
+            scoreToDelete = score
+        }
+    }
+    
+    func deletePendingScore(){
+        if let scoreToDelete {
+            scores.removeAll(where: { $0.id == scoreToDelete.id })
         }
     }
 }
