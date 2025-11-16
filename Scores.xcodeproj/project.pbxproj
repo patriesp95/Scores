@@ -15,6 +15,7 @@
 		B310095F2EC940DD00BCFEEE /* ComposerHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B310095E2EC940DD00BCFEEE /* ComposerHeader.swift */; };
 		B319D7EE2EC71156000FC268 /* ScoreRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B319D7ED2EC71156000FC268 /* ScoreRow.swift */; };
 		B33209012EC5A8CC0032A9F0 /* ScoresVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33209002EC5A8C70032A9F0 /* ScoresVM.swift */; };
+		B37C0AD92EC9EF7F00252162 /* ScoreDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37C0AD82EC9EF7500252162 /* ScoreDetailView.swift */; };
 		B3ACE3022EC5BEFD00DDCDBA /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ACE3012EC5BEFD00DDCDBA /* JSONLoader.swift */; };
 		B3DED5D72EC479BC00F6E524 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DED5D42EC479BC00F6E524 /* ContentView.swift */; };
 		B3DED5D82EC479BC00F6E524 /* ScoresApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DED5D52EC479BC00F6E524 /* ScoresApp.swift */; };
@@ -36,6 +37,7 @@
 		B310095E2EC940DD00BCFEEE /* ComposerHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposerHeader.swift; sourceTree = "<group>"; };
 		B319D7ED2EC71156000FC268 /* ScoreRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreRow.swift; sourceTree = "<group>"; };
 		B33209002EC5A8C70032A9F0 /* ScoresVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresVM.swift; sourceTree = "<group>"; };
+		B37C0AD82EC9EF7500252162 /* ScoreDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreDetailView.swift; sourceTree = "<group>"; };
 		B3ACE3012EC5BEFD00DDCDBA /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
 		B3DED5C52EC4665300F6E524 /* Scores.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scores.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3DED5D32EC479BC00F6E524 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				B3DED5D42EC479BC00F6E524 /* ContentView.swift */,
+				B37C0AD82EC9EF7500252162 /* ScoreDetailView.swift */,
 				B3003BC32EC903D800030B3F /* ScoresSectionView.swift */,
 				B3003BBD2EC881F800030B3F /* AddScoreView.swift */,
 				B319D7EC2EC71150000FC268 /* Components */,
@@ -233,6 +236,7 @@
 				B3ACE3022EC5BEFD00DDCDBA /* JSONLoader.swift in Sources */,
 				B310095F2EC940DD00BCFEEE /* ComposerHeader.swift in Sources */,
 				B3003BBE2EC881F800030B3F /* AddScoreView.swift in Sources */,
+				B37C0AD92EC9EF7F00252162 /* ScoreDetailView.swift in Sources */,
 				B3DED5E22EC47AED00F6E524 /* Score.swift in Sources */,
 				B3003BC62EC9339900030B3F /* ScoreRow2.swift in Sources */,
 				B3DED5D82EC479BC00F6E524 /* ScoresApp.swift in Sources */,

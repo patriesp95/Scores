@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 
 enum Arrangement: String, Identifiable, CaseIterable {
-    case none = "None"
+    case none = "Default"
     case ascended = "Ascending"
     case descended = "Descending"
     

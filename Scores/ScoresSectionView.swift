@@ -23,6 +23,9 @@ struct ScoresSectionView: View {
                     isPresented: $searchPresent,
                     prompt: "Search for a score by title"
                 )
+                .navigationDestination(for: Score.self) { score in
+                    ScoreDetailView(score: score)
+                }
                 .insertButtonV2 {
                     showInsert.toggle()
                 }
@@ -58,7 +61,9 @@ struct ScoresSectionView: View {
             ForEach(vm.composers) { composer in
                 Section {
                     ForEach(composer.scores) { score in
-                        ScoreRow(score: score)
+                        NavigationLink(value: score) {
+                            ScoreRow(score: score)
+                        }
                     }
                     .onDelete { index in
                         vm.deleteRow(composer: composer.composer, indexSet: index)
