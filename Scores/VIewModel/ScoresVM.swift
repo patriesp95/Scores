@@ -8,6 +8,22 @@
 import SwiftUI
 import Combine
 
+enum Arrangement: String, Identifiable, CaseIterable {
+    case none = "None"
+    case ascended = "Ascending"
+    case descended = "Descending"
+    
+    var id: Self { self }
+    
+    var systemImageName: String {
+        switch self {
+            case .none:      return "arrow.clockwise"
+            case .ascended:  return "arrow.up"
+            case .descended: return "arrow.down"
+        }
+    }
+}
+
 final class ScoresVM: ObservableObject {
     @Published var scores: [Score]
     private let repository: DataRepository
@@ -16,6 +32,8 @@ final class ScoresVM: ObservableObject {
     
     @Published var showAlert = false
     @Published var msg = ""
+    
+    @Published var order: Arrangement = .none
     
     private var scoreToDelete: Score?
     
@@ -37,7 +55,20 @@ final class ScoresVM: ObservableObject {
         Set(scores.map(\.composer)).sorted().map { composer in
             Composers(composer: composer,
                       scores: scores.filter { $0.composer == composer }
-                .filter{ search.isEmpty || $0.title.range(of: search, options: [.caseInsensitive, .diacriticInsensitive]) != nil })
+                .filter {
+                    search.isEmpty || $0.title.range(of: search, options: [.caseInsensitive, .diacriticInsensitive]) != nil
+                }
+                .sorted {
+                    switch order {
+                    case .none:
+                        $0.id < $1.id
+                    case .ascended:
+                        $0.title < $1.title
+                    case .descended:
+                        $0.title > $1.title
+                    }
+                }
+            )
         }
     }
     

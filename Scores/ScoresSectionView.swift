@@ -76,6 +76,27 @@ struct ScoresSectionView: View {
                 }
             }
         }
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Menu {
+                    ForEach(Arrangement.allCases) { order in
+                        Button {
+                            vm.order = order
+                        } label : {
+                            HStack(spacing: 16) {
+                                Text(order.rawValue)
+                                Spacer()
+                                Label(order.rawValue, systemImage: order.systemImageName)
+                            }
+                        }
+                        .padding(8)
+                    }
+                } label: {
+                    Label("Arrange", systemImage: "square.stack.fill")
+                }
+
+            }
+        }
         .alert("Deleting Scores", isPresented: $vm.showAlert) {
             Button(role: .cancel) {} label: {
                 Text("Cancel")
