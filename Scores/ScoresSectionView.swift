@@ -16,7 +16,7 @@ struct ScoresSectionView: View {
 
     var body: some View {
         NavigationStack {
-            list3
+            list2
                 .navigationTitle("Scores")
                 .searchable(
                     text: $vm.search,
@@ -52,7 +52,7 @@ struct ScoresSectionView: View {
             .onDelete(perform: vm.delete)
         }
     }
-    
+
     var list2: some View {
         List {
             ForEach(vm.composers) { composer in
@@ -60,14 +60,24 @@ struct ScoresSectionView: View {
                     ForEach(composer.scores) { score in
                         ScoreRow(score: score)
                     }
+                    .onDelete { index in
+                        vm.deleteRow(composer: composer.composer, indexSet: index)
+                    }
+                    .swipeActions(edge: .leading){
+                        Button {
+                            
+                        } label: {
+                            Image(systemName: "star")
+                        }
+                        .tint(.yellow)
+                    }
                 } header: {
                     Text(composer.composer)
                 }
             }
-            .onDelete(perform: vm.delete)
         }
     }
-    
+
     var list3: some View {
         ScrollView {
             LazyVStack(pinnedViews: [.sectionHeaders]) {
@@ -77,10 +87,48 @@ struct ScoresSectionView: View {
                             ForEach(composer.scores) { score in
                                 ScoreRow2(score: score)
                             }
+                            .onDelete(perform: vm.delete)
+                            .swipeActions(edge: .leading){
+                                Button {
+                                    
+                                } label: {
+                                    Image(systemName: "star")
+                                }
+                                .tint(.yellow)
+
+                            }
                         } header: {
                             ComposerHeader(composer: composer.composer)
                         }
                     }
+                }
+            }
+        }
+        .scrollIndicators(.hidden)
+        .safeAreaPadding()
+    }
+    
+    var list4: some View {
+        ScrollView {
+            LazyVStack(pinnedViews: [.sectionHeaders]) {
+                ForEach(vm.scores) { score in
+                    ScoreRow2(score: score)
+                        .contextMenu {
+                            Button {
+                                
+                            } label: {
+                                Label("Favorite", systemImage: "star")
+                            }
+                            .tint(.yellow)
+
+                            Button(role: .destructive){
+                                
+                            } label: {
+                                Label("Delete", systemImage: "trash")
+
+                            }
+
+                        }
                 }
                 .onDelete(perform: vm.delete)
             }

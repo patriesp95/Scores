@@ -11,7 +11,7 @@ import SwiftUI
 struct ScoresApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ScoresSectionView()
         }
     }
 }

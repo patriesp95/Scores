@@ -49,4 +49,11 @@ final class ScoresVM: ObservableObject {
     func delete(indexSet: IndexSet) {
         scores.remove(atOffsets: indexSet)
     }
+    
+    func deleteRow(composer: String, indexSet: IndexSet) {
+        if let index = indexSet.first, let scoresComposer = composers.first(where: { $0.composer == composer})?.scores {
+            let score = scoresComposer[index]
+            scores.removeAll(where: { $0.id == score.id })
+        }
+    }
 }
