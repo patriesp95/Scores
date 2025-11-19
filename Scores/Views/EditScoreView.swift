@@ -17,10 +17,18 @@ struct EditScoreView: View {
             TextField("Enter the composer of the score", text: $vm.composer)
             TextField("Enter the year of the release", value:$vm.year, format:.number.precision(.significantDigits(4)))
         }
-        .textFieldStyle(.roundedBorder)
         .safeAreaPadding()
     }
 }
+
+/*
+ 
+ @State private var fecha = Date.now
+
+ TextField("Enter the date (DD/MMMM/YYYY)", value: $fecha, format: .dateTime.day(.twoDigits).month(.twoDigits).year(.defaultDigits))
+ 
+ 
+ */
 
 #Preview {
     EditScoreView(vm: EditScoreVM(score: .test))
