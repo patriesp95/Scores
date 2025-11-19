@@ -15,6 +15,8 @@
 		B310095F2EC940DD00BCFEEE /* ComposerHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B310095E2EC940DD00BCFEEE /* ComposerHeader.swift */; };
 		B319D7EE2EC71156000FC268 /* ScoreRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B319D7ED2EC71156000FC268 /* ScoreRow.swift */; };
 		B33209012EC5A8CC0032A9F0 /* ScoresVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33209002EC5A8C70032A9F0 /* ScoresVM.swift */; };
+		B36BC0412ECDA1F500932D36 /* EditScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36BC0402ECDA1F500932D36 /* EditScoreView.swift */; };
+		B36BC0432ECDA39C00932D36 /* EditScoreVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36BC0422ECDA39600932D36 /* EditScoreVM.swift */; };
 		B37C0AD92EC9EF7F00252162 /* ScoreDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37C0AD82EC9EF7500252162 /* ScoreDetailView.swift */; };
 		B3ACE3022EC5BEFD00DDCDBA /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ACE3012EC5BEFD00DDCDBA /* JSONLoader.swift */; };
 		B3DED5D72EC479BC00F6E524 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DED5D42EC479BC00F6E524 /* ContentView.swift */; };
@@ -37,6 +39,8 @@
 		B310095E2EC940DD00BCFEEE /* ComposerHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposerHeader.swift; sourceTree = "<group>"; };
 		B319D7ED2EC71156000FC268 /* ScoreRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreRow.swift; sourceTree = "<group>"; };
 		B33209002EC5A8C70032A9F0 /* ScoresVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresVM.swift; sourceTree = "<group>"; };
+		B36BC0402ECDA1F500932D36 /* EditScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScoreView.swift; sourceTree = "<group>"; };
+		B36BC0422ECDA39600932D36 /* EditScoreVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScoreVM.swift; sourceTree = "<group>"; };
 		B37C0AD82EC9EF7500252162 /* ScoreDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreDetailView.swift; sourceTree = "<group>"; };
 		B3ACE3012EC5BEFD00DDCDBA /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
 		B3DED5C52EC4665300F6E524 /* Scores.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scores.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,12 +78,23 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		B33208FF2EC5A8AA0032A9F0 /* VIewModel */ = {
+		B33208FF2EC5A8AA0032A9F0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B36BC0422ECDA39600932D36 /* EditScoreVM.swift */,
 				B33209002EC5A8C70032A9F0 /* ScoresVM.swift */,
 			);
-			path = VIewModel;
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B36BC03F2ECDA1A200932D36 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B37C0AD82EC9EF7500252162 /* ScoreDetailView.swift */,
+				B3003BBD2EC881F800030B3F /* AddScoreView.swift */,
+				B36BC0402ECDA1F500932D36 /* EditScoreView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B3DED5BC2EC4665300F6E524 = {
@@ -101,12 +116,11 @@
 		B3DED5D62EC479BC00F6E524 /* Scores */ = {
 			isa = PBXGroup;
 			children = (
+				B36BC03F2ECDA1A200932D36 /* Views */,
 				B3DED5D42EC479BC00F6E524 /* ContentView.swift */,
-				B37C0AD82EC9EF7500252162 /* ScoreDetailView.swift */,
 				B3003BC32EC903D800030B3F /* ScoresSectionView.swift */,
-				B3003BBD2EC881F800030B3F /* AddScoreView.swift */,
 				B319D7EC2EC71150000FC268 /* Components */,
-				B33208FF2EC5A8AA0032A9F0 /* VIewModel */,
+				B33208FF2EC5A8AA0032A9F0 /* ViewModel */,
 				B3DED5E52EC4DF1400F6E524 /* Repository */,
 				B3DED5E02EC47AE200F6E524 /* Models */,
 				B3DED5DA2EC47A4900F6E524 /* Resources */,
@@ -231,6 +245,7 @@
 				B3003BC42EC903D800030B3F /* ScoresSectionView.swift in Sources */,
 				B3DED5E42EC4D0B800F6E524 /* Formatters.swift in Sources */,
 				B33209012EC5A8CC0032A9F0 /* ScoresVM.swift in Sources */,
+				B36BC0432ECDA39C00932D36 /* EditScoreVM.swift in Sources */,
 				B3DED5E72EC4DF2100F6E524 /* DataRepository.swift in Sources */,
 				B3003BC02EC8BCE400030B3F /* CloseButton.swift in Sources */,
 				B3ACE3022EC5BEFD00DDCDBA /* JSONLoader.swift in Sources */,
@@ -242,6 +257,7 @@
 				B3DED5D82EC479BC00F6E524 /* ScoresApp.swift in Sources */,
 				B319D7EE2EC71156000FC268 /* ScoreRow.swift in Sources */,
 				B3DED5E92EC5380F00F6E524 /* Repository.swift in Sources */,
+				B36BC0412ECDA1F500932D36 /* EditScoreView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
