@@ -17,6 +17,7 @@
 		B33209012EC5A8CC0032A9F0 /* ScoresVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33209002EC5A8C70032A9F0 /* ScoresVM.swift */; };
 		B36BC0412ECDA1F500932D36 /* EditScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36BC0402ECDA1F500932D36 /* EditScoreView.swift */; };
 		B36BC0432ECDA39C00932D36 /* EditScoreVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36BC0422ECDA39600932D36 /* EditScoreVM.swift */; };
+		B36BC0452ECE367800932D36 /* BorderedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36BC0442ECE367800932D36 /* BorderedTextField.swift */; };
 		B37C0AD92EC9EF7F00252162 /* ScoreDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37C0AD82EC9EF7500252162 /* ScoreDetailView.swift */; };
 		B3ACE3022EC5BEFD00DDCDBA /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ACE3012EC5BEFD00DDCDBA /* JSONLoader.swift */; };
 		B3DED5D72EC479BC00F6E524 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DED5D42EC479BC00F6E524 /* ContentView.swift */; };
@@ -41,6 +42,7 @@
 		B33209002EC5A8C70032A9F0 /* ScoresVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresVM.swift; sourceTree = "<group>"; };
 		B36BC0402ECDA1F500932D36 /* EditScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScoreView.swift; sourceTree = "<group>"; };
 		B36BC0422ECDA39600932D36 /* EditScoreVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScoreVM.swift; sourceTree = "<group>"; };
+		B36BC0442ECE367800932D36 /* BorderedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedTextField.swift; sourceTree = "<group>"; };
 		B37C0AD82EC9EF7500252162 /* ScoreDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreDetailView.swift; sourceTree = "<group>"; };
 		B3ACE3012EC5BEFD00DDCDBA /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
 		B3DED5C52EC4665300F6E524 /* Scores.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scores.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +71,7 @@
 		B319D7EC2EC71150000FC268 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B36BC0442ECE367800932D36 /* BorderedTextField.swift */,
 				B319D7ED2EC71156000FC268 /* ScoreRow.swift */,
 				B3003BC52EC9339900030B3F /* ScoreRow2.swift */,
 				B3003BBF2EC8BCE400030B3F /* CloseButton.swift */,
@@ -257,6 +260,7 @@
 				B3DED5D82EC479BC00F6E524 /* ScoresApp.swift in Sources */,
 				B319D7EE2EC71156000FC268 /* ScoreRow.swift in Sources */,
 				B3DED5E92EC5380F00F6E524 /* Repository.swift in Sources */,
+				B36BC0452ECE367800932D36 /* BorderedTextField.swift in Sources */,
 				B36BC0412ECDA1F500932D36 /* EditScoreView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
