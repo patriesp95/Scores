@@ -11,11 +11,16 @@ struct BorderedTextField: View {
     let placeholder: String
     @Binding var text: String
     let lines: Int
+    var action: (() -> Void)?
     
-    init(_ placeholder: String, text: Binding<String>, lines: Int = 1) {
+    init(_ placeholder: String,
+         text: Binding<String>,
+         lines: Int = 1,
+         action: (() -> Void)? = nil) {
         self.placeholder = placeholder
         self._text = text
         self.lines = lines
+        self.action = action
     }
 
     var body: some View {
@@ -28,7 +33,11 @@ struct BorderedTextField: View {
             .lineLimit(lines, reservesSpace: true)
             if !text.isEmpty {
                 Button {
-                    text = ""
+                    if let action {
+                        action()
+                    } else {
+                        text = ""
+                    }
                 } label: {
                     Image(systemName: "xmark")
                         .symbolVariant(.circle.fill)

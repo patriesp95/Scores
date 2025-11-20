@@ -19,15 +19,6 @@ struct EditScoreView: View {
     }
 }
 
-/*
- 
- @State private var fecha = Date.now
-
- TextField("Enter the date (DD/MMMM/YYYY)", value: $fecha, format: .dateTime.day(.twoDigits).month(.twoDigits).year(.defaultDigits))
- 
- 
- */
-
 #Preview {
     EditScoreView(vm: EditScoreVM(score: .test))
 }
