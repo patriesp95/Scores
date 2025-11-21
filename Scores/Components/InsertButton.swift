@@ -41,6 +41,24 @@ fileprivate struct InsertButtonV2: ViewModifier {
     }
 }
 
+fileprivate struct ToolbarButton<ViewContent>: ViewModifier where ViewContent: View {
+    let callback: () -> Void
+    @ViewBuilder let label: () -> ViewContent
+    
+    func body(content: Content) -> some View {
+        content
+            .toolbar {
+                ToolbarItem {
+                    Button {
+                        callback()
+                    } label: {
+                        label()
+                    }
+                }
+            }
+    }
+}
+
 extension View {
     func insertButtonV1(show: Binding<Bool>) -> some View {
        modifier(InsertButtonV1(showInsert: show))
@@ -48,5 +66,10 @@ extension View {
     
     func insertButtonV2(callback: @escaping () -> Void) -> some View {
         modifier(InsertButtonV2(callback: callback))
+    }
+    
+    func toolbarButton<ViewContent>(action: @escaping () -> Void,
+                                    label: @escaping () -> ViewContent) -> some View where ViewContent: View {
+        modifier(ToolbarButton(callback: action, label: label))
     }
 }
