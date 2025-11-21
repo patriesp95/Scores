@@ -43,6 +43,10 @@ final class ScoresVM: ObservableObject {
         }
     }
     
+    var composerNames: [String] {
+        Set(scores.map(\.composer)).sorted()
+    }
+    
     var scoresByComposer: [[Score]] {
         Dictionary(grouping: scores) { score in
             score.composer
