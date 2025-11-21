@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct ScoresApp: App {
+    @StateObject private var vm = ScoresVM()
+
     var body: some Scene {
         WindowGroup {
-            ScoresSectionView()
+            ScoresListView()
+                .environmentObject(vm)
+                .onAppear {
+                    print(URL.documentsDirectory)
+                }
         }
     }
 }

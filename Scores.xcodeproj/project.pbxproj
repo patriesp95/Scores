@@ -19,7 +19,10 @@
 		B36BC0432ECDA39C00932D36 /* EditScoreVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36BC0422ECDA39600932D36 /* EditScoreVM.swift */; };
 		B36BC0452ECE367800932D36 /* BorderedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36BC0442ECE367800932D36 /* BorderedTextField.swift */; };
 		B37C0AD92EC9EF7F00252162 /* ScoreDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37C0AD82EC9EF7500252162 /* ScoreDetailView.swift */; };
+		B3A183B92ED0564E004DA62A /* ConfirmButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A183B82ED0564E004DA62A /* ConfirmButton.swift */; };
+		B3A183BB2ED0588C004DA62A /* ScoresListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A183BA2ED0588C004DA62A /* ScoresListView.swift */; };
 		B3ACE3022EC5BEFD00DDCDBA /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ACE3012EC5BEFD00DDCDBA /* JSONLoader.swift */; };
+		B3DB8D8A2ED0736300CCFB36 /* AddScoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DB8D892ED0736300CCFB36 /* AddScoreViewModel.swift */; };
 		B3DED5D72EC479BC00F6E524 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DED5D42EC479BC00F6E524 /* ContentView.swift */; };
 		B3DED5D82EC479BC00F6E524 /* ScoresApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DED5D52EC479BC00F6E524 /* ScoresApp.swift */; };
 		B3DED5D92EC479BC00F6E524 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3DED5D32EC479BC00F6E524 /* Assets.xcassets */; };
@@ -44,7 +47,10 @@
 		B36BC0422ECDA39600932D36 /* EditScoreVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScoreVM.swift; sourceTree = "<group>"; };
 		B36BC0442ECE367800932D36 /* BorderedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedTextField.swift; sourceTree = "<group>"; };
 		B37C0AD82EC9EF7500252162 /* ScoreDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreDetailView.swift; sourceTree = "<group>"; };
+		B3A183B82ED0564E004DA62A /* ConfirmButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmButton.swift; sourceTree = "<group>"; };
+		B3A183BA2ED0588C004DA62A /* ScoresListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresListView.swift; sourceTree = "<group>"; };
 		B3ACE3012EC5BEFD00DDCDBA /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
+		B3DB8D892ED0736300CCFB36 /* AddScoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScoreViewModel.swift; sourceTree = "<group>"; };
 		B3DED5C52EC4665300F6E524 /* Scores.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scores.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3DED5D32EC479BC00F6E524 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3DED5D42EC479BC00F6E524 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +82,7 @@
 				B3003BC52EC9339900030B3F /* ScoreRow2.swift */,
 				B3003BBF2EC8BCE400030B3F /* CloseButton.swift */,
 				B3003BC12EC8C2FE00030B3F /* InsertButton.swift */,
+				B3A183B82ED0564E004DA62A /* ConfirmButton.swift */,
 				B310095E2EC940DD00BCFEEE /* ComposerHeader.swift */,
 			);
 			path = Components;
@@ -84,6 +91,7 @@
 		B33208FF2EC5A8AA0032A9F0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B3DB8D892ED0736300CCFB36 /* AddScoreViewModel.swift */,
 				B36BC0422ECDA39600932D36 /* EditScoreVM.swift */,
 				B33209002EC5A8C70032A9F0 /* ScoresVM.swift */,
 			);
@@ -121,6 +129,7 @@
 			children = (
 				B36BC03F2ECDA1A200932D36 /* Views */,
 				B3DED5D42EC479BC00F6E524 /* ContentView.swift */,
+				B3A183BA2ED0588C004DA62A /* ScoresListView.swift */,
 				B3003BC32EC903D800030B3F /* ScoresSectionView.swift */,
 				B319D7EC2EC71150000FC268 /* Components */,
 				B33208FF2EC5A8AA0032A9F0 /* ViewModel */,
@@ -243,14 +252,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3A183BB2ED0588C004DA62A /* ScoresListView.swift in Sources */,
 				B3DED5D72EC479BC00F6E524 /* ContentView.swift in Sources */,
 				B3003BC22EC8C2FE00030B3F /* InsertButton.swift in Sources */,
+				B3DB8D8A2ED0736300CCFB36 /* AddScoreViewModel.swift in Sources */,
 				B3003BC42EC903D800030B3F /* ScoresSectionView.swift in Sources */,
 				B3DED5E42EC4D0B800F6E524 /* Formatters.swift in Sources */,
 				B33209012EC5A8CC0032A9F0 /* ScoresVM.swift in Sources */,
 				B36BC0432ECDA39C00932D36 /* EditScoreVM.swift in Sources */,
 				B3DED5E72EC4DF2100F6E524 /* DataRepository.swift in Sources */,
 				B3003BC02EC8BCE400030B3F /* CloseButton.swift in Sources */,
+				B3A183B92ED0564E004DA62A /* ConfirmButton.swift in Sources */,
 				B3ACE3022EC5BEFD00DDCDBA /* JSONLoader.swift in Sources */,
 				B310095F2EC940DD00BCFEEE /* ComposerHeader.swift in Sources */,
 				B3003BBE2EC881F800030B3F /* AddScoreView.swift in Sources */,

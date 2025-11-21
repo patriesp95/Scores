@@ -9,6 +9,8 @@ import SwiftUI
 
 struct EditScoreView: View {
     @EnvironmentObject var scoresVM: ScoresVM
+    @ObservedObject private var addScoreVM = AddScoreViewModel()
+    @Environment(\.dismiss) private var dismiss
     @ObservedObject var vm: EditScoreVM
     
     var body: some View {
@@ -44,12 +46,43 @@ struct EditScoreView: View {
             }
         }
         .safeAreaPadding()
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button(role: .cancel){
+                    dismiss()
+                } label : {
+                    Label("Cancel", systemImage: "xmark")
+                }
+            }
+        }
+        .confirmButton {
+            if let score = vm.validate() {
+                scoresVM.update(score: score)
+            }
+        }
+        .navigationBarTitleDisplayMode(.inline)
+        .alert("Validation error",
+               isPresented: $vm.showAlert) {} message: {
+            Text(vm.errorMsg)
+        }
+    }
+    
+    // MARK: - Actions
+    private func saveScore() {
+        let newID = scoresVM.generateNewID()
+
+        if let newScore = addScoreVM.createScore(withID: newID) {
+            scoresVM.insert(score: newScore)
+            dismiss()
+        }
     }
 }
 
 #Preview {
-    EditScoreView(vm: EditScoreVM(score: .test))
-        .environmentObject(ScoresVM(repository: RepositoryTest()))
+    NavigationStack {
+        EditScoreView(vm: EditScoreVM(score: .test))
+            .environmentObject(ScoresVM(repository: RepositoryTest()))
+    }
 }
 
 

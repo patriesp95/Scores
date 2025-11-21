@@ -11,11 +11,19 @@ struct Repository: DataRepository {
     var url: URL {
         Bundle.main.url(forResource: "scoresdata", withExtension: "json")!
     }
+    
+    var docURL: URL {
+        URL.documentsDirectory.appending(path: "scoresdata.json")
+    }
 }
 
 struct RepositoryTest: DataRepository {
     var url: URL {
         Bundle.main.url(forResource: "scoresdatatest", withExtension: "json")!
+    }
+    
+    var docURL: URL {
+        URL.documentsDirectory.appending(path: "scoresdatatest.json")
     }
     
     func saveScores(_ scores: [Score]) throws {

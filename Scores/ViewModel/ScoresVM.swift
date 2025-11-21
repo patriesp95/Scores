@@ -25,7 +25,11 @@ enum Arrangement: String, Identifiable, CaseIterable {
 }
 
 final class ScoresVM: ObservableObject {
-    @Published var scores: [Score]
+    @Published var scores: [Score] {
+        didSet {
+            try? repository.saveScores(scores)
+        }
+    }
     private let repository: DataRepository
     
     @Published var search = ""
@@ -102,6 +106,20 @@ final class ScoresVM: ObservableObject {
     func deletePendingScore(){
         if let scoreToDelete {
             scores.removeAll(where: { $0.id == scoreToDelete.id })
+        }
+    }
+    
+    func insert(score: Score) {
+        scores.append(score)
+    }
+    
+    func generateNewID() -> Int {
+        (scores.map(\.id).max() ?? 0) + 1
+    }
+    
+    func update(score: Score) {
+        if let index = scores.firstIndex(where: { $0.id == score.id }) {
+            scores[index] = score
         }
     }
 }
